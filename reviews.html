@@ -17,23 +17,21 @@
         .nav-links a {margin-left: 2rem; text-decoration: none; color: var(--text-muted); transition: 0.3s;}
         .nav-links a:hover {color: var(--cyan);}
         
-        /* Configuração da Grade de 3 Colunas */
         .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;}
-        
-        /* Estilo Base do Card */
         .card {background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit; transition: 0.3s; display: flex; flex-direction: column;}
         .card:hover {transform: translateY(-5px); border-color: var(--cyan);}
         
-        /* Tamanho Uniforme dos "Quadradinhos" e Efeito de "Zoom" (Cover) */
-        .card-img, .placeholder-img {
+        /* ZOOM PARA PREENCHER O QUADRADO */
+        .card-img {
             width: 100%; 
-            height: 200px; /* Altura fixa para manter todos iguais */
-            object-fit: cover; /* ISSO DÁ O ZOOM: Preenche tudo, cortando o que sobrar */
+            height: 200px; 
+            object-fit: cover; 
+            object-position: center; 
             display: block;
         }
         
-        /* Estilo Específico para o Placeholder com Ícone */
         .placeholder-img {
+            height: 200px; 
             background: #1e293b; 
             display: flex; 
             align-items: center; 
@@ -41,6 +39,8 @@
         }
         
         .card-content {padding: 1.5rem; flex-grow: 1;}
+        .card-content h3 {margin: 0 0 0.5rem 0; font-size: 1.25rem;}
+        .card-content p {margin: 0; color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;}
     </style>
 </head>
 <body>
@@ -55,48 +55,26 @@
             </div>
         </nav>
     </header>
+
     <main class="container">
         <h1>Nossos <span class="text-gradient">Reviews</span></h1>
+        
         <div class="grid">
+            <a href="#" class="card"><div class="placeholder-img"><i class="fas fa-plus" style="color:var(--cyan); font-size:2rem;"></i></div><div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div></a>
+            <a href="#" class="card"><div class="placeholder-img"><i class="fas fa-plus" style="color:var(--cyan); font-size:2rem;"></i></div><div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div></a>
+            <a href="#" class="card"><div class="placeholder-img"><i class="fas fa-plus" style="color:var(--cyan); font-size:2rem;"></i></div><div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div></a>
+            <a href="#" class="card"><div class="placeholder-img"><i class="fas fa-plus" style="color:var(--cyan); font-size:2rem;"></i></div><div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div></a>
+            <a href="#" class="card"><div class="placeholder-img"><i class="fas fa-plus" style="color:var(--cyan); font-size:2rem;"></i></div><div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div></a>
+            <a href="#" class="card"><div class="placeholder-img"><i class="fas fa-plus" style="color:var(--cyan); font-size:2rem;"></i></div><div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div></a>
+            <a href="#" class="card"><div class="placeholder-img"><i class="fas fa-plus" style="color:var(--cyan); font-size:2rem;"></i></div><div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div></a>
+            <a href="#" class="card"><div class="placeholder-img"><i class="fas fa-plus" style="color:var(--cyan); font-size:2rem;"></i></div><div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div></a>
+
             <a href="rtx-5050.html" class="card">
                 <img src="thumb.png" class="card-img" alt="RTX 5050">
                 <div class="card-content">
                     <h3>RTX 5050 vs RX 7600: Qual escolher?</h3>
                     <p>Analisamos o desempenho real e o custo-benefício dessas placas.</p>
                 </div>
-            </a>
-
-            <a href="#" class="card">
-                <div class="placeholder-img"><i class="fas fa-plus" style="font-size:2rem; color:var(--cyan);"></i></div>
-                <div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div>
-            </a>
-            <a href="#" class="card">
-                <div class="placeholder-img"><i class="fas fa-plus" style="font-size:2rem; color:var(--cyan);"></i></div>
-                <div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div>
-            </a>
-            <a href="#" class="card">
-                <div class="placeholder-img"><i class="fas fa-plus" style="font-size:2rem; color:var(--cyan);"></i></div>
-                <div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div>
-            </a>
-            <a href="#" class="card">
-                <div class="placeholder-img"><i class="fas fa-plus" style="font-size:2rem; color:var(--cyan);"></i></div>
-                <div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div>
-            </a>
-            <a href="#" class="card">
-                <div class="placeholder-img"><i class="fas fa-plus" style="font-size:2rem; color:var(--cyan);"></i></div>
-                <div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div>
-            </a>
-            <a href="#" class="card">
-                <div class="placeholder-img"><i class="fas fa-plus" style="font-size:2rem; color:var(--cyan);"></i></div>
-                <div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div>
-            </a>
-            <a href="#" class="card">
-                <div class="placeholder-img"><i class="fas fa-plus" style="font-size:2rem; color:var(--cyan);"></i></div>
-                <div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div>
-            </a>
-            <a href="#" class="card">
-                <div class="placeholder-img"><i class="fas fa-plus" style="font-size:2rem; color:var(--cyan);"></i></div>
-                <div class="card-content"><h3>Novo Review</h3><p>Em breve: Mais testes de hardware aqui no XIX Tech.</p></div>
             </a>
         </div>
     </main>
