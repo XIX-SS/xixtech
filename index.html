@@ -1,641 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XIXTech | O Futuro da Tecnologia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>RTX 5050 vs RX 7600 - XIXTech</title>
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --cyan: #06b6d4;
-            --purple: #8b5cf6;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --glass-hover: rgba(255, 255, 255, 0.08);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, .logo {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: color 0.3s ease;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* Utilities */
-        .text-gradient {
-            background: linear-gradient(135deg, var(--cyan), var(--purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .glass {
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Header & Nav */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--glass-border);
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: var(--cyan);
-        }
-
-        .menu-btn {
-            display: block;
-            background: none;
-            border: none;
-            color: var(--text-main);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu {
-            position: fixed;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            background: var(--bg-color);
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            transform: translateY(-150%);
-            transition: transform 0.3s ease-in-out;
-            z-index: 999;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        .mobile-menu.active {
-            transform: translateY(0);
-        }
-
-        .mobile-menu a {
-            font-size: 1.2rem;
-            font-weight: 500;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 8rem 0 4rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 300px;
-            height: 300px;
-            background: var(--purple);
-            filter: blur(150px);
-            opacity: 0.3;
-            z-index: -1;
-            border-radius: 50%;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--cyan), var(--purple));
-            color: white;
-            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
-        }
-
-        .btn-primary:hover {
-            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
-            transform: translateY(-2px);
-        }
-
-        /* Section Headers */
-        .section-header {
-            margin-bottom: 2.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-        }
-
-        .view-all {
-            color: var(--cyan);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .view-all:hover {
-            text-decoration: underline;
-        }
-
-        /* Grid Layouts */
-        .grid {
-            display: grid;
-            gap: 1.5rem;
-            grid-template-columns: 1fr;
-        }
-
-        /* Cards */
-        .card {
-            overflow: hidden;
-            transition: transform 0.3s ease, background 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            background: var(--glass-hover);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        .card-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 1rem;
-            align-self: flex-start;
-        }
-
-        .badge-news { background: rgba(6, 182, 212, 0.1); color: var(--cyan); border: 1px solid rgba(6, 182, 212, 0.2); }
-        .badge-review { background: rgba(139, 92, 246, 0.1); color: var(--purple); border: 1px solid rgba(139, 92, 246, 0.2); }
-
-        .card-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
-        }
-
-        .card-excerpt {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--glass-border);
-            padding-top: 1rem;
-        }
-
-        /* Newsletter */
-        .newsletter {
-            margin: 5rem 0;
-            padding: 3rem 1.5rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .newsletter::before {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background: var(--cyan);
-            filter: blur(100px);
-            opacity: 0.2;
-            z-index: -1;
-        }
-
-        .newsletter h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .newsletter p {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .newsletter-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .newsletter-input {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            border: 1px solid var(--glass-border);
-            background: rgba(0, 0, 0, 0.2);
-            color: var(--text-main);
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-
-        .newsletter-input:focus {
-            border-color: var(--cyan);
-        }
-
-        /* Footer */
-        footer {
-            border-top: 1px solid var(--glass-border);
-            padding: 3rem 0;
-            margin-top: 4rem;
-            text-align: center;
-            color: var(--text-muted);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-links a {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-        }
-
-        .social-links a:hover {
-            color: var(--cyan);
-        }
-
-        /* Responsive Design (Mobile First approach adjusted for Desktop) */
-        @media (min-width: 768px) {
-            .nav-links {
-                display: flex;
-            }
-
-            .menu-btn {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 4rem;
-            }
-
-            .hero p {
-                font-size: 1.25rem;
-            }
-
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .newsletter-form {
-                flex-direction: row;
-            }
-            
-            .newsletter-input {
-                flex-grow: 1;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+        body { font-family: sans-serif; background: #0f172a; color: white; padding: 20px; line-height: 1.6; }
+        .container { max-width: 900px; margin: auto; }
+        .btn-voltar { display: inline-block; margin-bottom: 20px; color: #38bdf8; text-decoration: none; font-weight: bold; }
+        h1 { color: #f8fafc; border-bottom: 2px solid #38bdf8; padding-bottom: 10px; text-align: center; }
+        .tech-section { display: flex; flex-direction: column; gap: 25px; margin-top: 30px; }
+        .tech-box { padding: 25px; border-radius: 12px; border-top: 6px solid; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .rtx-box { background: #112211; border-color: #76b900; }
+        .rx-box { background: #221111; border-color: #f97316; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; }
+        .rtx-badge { background: #76b900; color: black; }
+        .rx-badge { background: #f97316; color: white; }
+        h2 { margin-top: 0; font-size: 1.5em; }
+        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; font-size: 0.9em; }
+        .spec-item { background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; }
+        table { width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 8px; overflow: hidden; margin-top: 25px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #334155; }
+        th { background: #334155; color: #38bdf8; }
+        .fps-rtx { color: #76b900; font-weight: bold; text-align: center; }
+        .fps-rx { color: #f97316; font-weight: bold; text-align: center; }
     </style>
 </head>
 <body>
+    <div class="container">
+        <a href="index.html" class="btn-voltar">← Voltar para o Início</a>
+        
+        <h1>RTX 5050 vs RX 7600: Qual tecnologia vence?</h1>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">XIX<span class="text-gradient">Tech</span></a>
-                <div class="nav-links">
-                    <a href="#noticias">Notícias</a>
-                    <a href="#reviews">Reviews</a>
-                    <a href="#tutoriais">Tutoriais</a>
-                    <a href="#sobre">Sobre</a>
+        <p style="text-align: center; font-size: 1.1em; color: #cbd5e1;">Uma análise profunda baseada nos testes do canal TecnoArt, comparando a nova geração da NVIDIA contra o custo-benefício da AMD.</p>
+
+        <div class="tech-section">
+            <div class="tech-box rtx-box">
+                <span class="badge rtx-badge">Arquitetura Blackwell</span>
+                <h2>NVIDIA GeForce RTX 5050</h2>
+                <p>A <strong>RTX 5050</strong> representa um salto tecnológico para a linha de entrada. Equipada com <strong>8GB de memória GDDR7</strong>, ela oferece uma largura de banda de <strong>320 GB/s</strong>, superando as gerações passadas em carregamento de texturas. O grande trunfo é o suporte ao <strong>DLSS 4</strong>, que utiliza IA para reconstruir quadros inteiros e melhorar o Ray Tracing via <strong>Ray Reconstruction</strong>.</p>
+                <p>Nesta análise, destaca-se que, embora o chip seja menor, a eficiência dos <strong>Tensor Cores de 5ª Geração</strong> permite que ela mantenha altas taxas de quadros em jogos modernos com um consumo baixíssimo (130W), sendo ideal para quem busca tecnologia de ponta e economia de energia.</p>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>VRAM:</strong> 8GB GDDR7 (128-bit)</div>
+                    <div class="spec-item"><strong>Tecnologia:</strong> DLSS 4 / Reflex</div>
+                    <div class="spec-item"><strong>Interface:</strong> PCIe 5.0 x8</div>
+                    <div class="spec-item"><strong>Foco:</strong> IA e Ray Tracing</div>
                 </div>
-                <button class="menu-btn" id="menu-btn" aria-label="Abrir menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </nav>
+            </div>
+
+            <div class="tech-box rx-box">
+                <span class="badge rx-badge">Arquitetura RDNA 3</span>
+                <h2>AMD Radeon RX 7600</h2>
+                <p>A <strong>RX 7600</strong> é a escolha de quem prefere o <strong>Poder Bruto Nativo</strong>. Com <strong>8GB de VRAM GDDR6</strong>, ela compensa a velocidade da memória com o <strong>AMD Infinity Cache de 32MB</strong>, que acelera o processamento interno e evita quedas de performance. Sua arquitetura RDNA 3 foca em entregar o melhor desempenho possível em 1080p sem a necessidade obrigatória de upscaling.</p>
+                <p>Um ponto forte citado no comparativo é o suporte ao <strong>FSR 3.1</strong> e a excelente performance em jogos competitivos. Além disso, ela conta com codificadores <strong>AV1 nativos</strong>, sendo uma placa fantástica para quem deseja fazer lives ou gravar vídeos com alta qualidade de imagem e cores precisas (12-bit) via engine de vídeo Radiance.</p>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>VRAM:</strong> 8GB GDDR6 (128-bit)</div>
+                    <div class="spec-item"><strong>Tecnologia:</strong> FSR 3.1 / Anti-Lag+</div>
+                    <div class="spec-item"><strong>Cache:</strong> 32MB Infinity Cache</div>
+                    <div class="spec-item"><strong>Foco:</strong> Performance Nativa e Custo</div>
+                </div>
+            </div>
         </div>
-    </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="#noticias">Notícias</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#tutoriais">Tutoriais</a>
-        <a href="#sobre">Sobre</a>
-    </div>
-
-    <main class="container">
-        <!-- Hero -->
-        <section class="hero">
-          
-            <a href="#noticias" class="btn btn-primary">Explorar Conteúdo</a>
-        </section>
-            <h1>O Melhor da Tecnologia <br><span class="text-gradient">Em um só lugar</span></h1>
-            <p>Acompanhe as últimas notícias, análises de hardware, tutoriais práticos e as melhores dicas do mundo tech.</p>
-
-        <!-- Últimas Notícias -->
-        <section id="noticias" style="margin-top: 4rem;">
-            <div class="section-header">
-                <h2 class="section-title">Últimas <span class="text-gradient">Notícias</span></h2>
-                <a href="#" class="view-all">Ver todas <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="grid">
-                <!-- Card 1 -->
-                <article class="card glass">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="Inteligência Artificial" class="card-img">
-                    <div class="card-content">
-                        <span class="badge badge-news">IA & Machine Learning</span>
-                        <h3 class="card-title"><a href="ia.html" style="color: inherit; text-decoration: none;">Novo modelo de IA promete revolucionar a programação</a></h3>
-
-                        <p class="card-excerpt">Desenvolvedores ao redor do mundo estão testando a nova ferramenta que promete escrever código 10x mais rápido.</p>
-                        <div class="card-footer">
-                            <span><i class="fa-regular fa-clock"></i> 2 horas atrás</span>
-                            <span><i class="fa-regular fa-comment"></i> 24</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 2 -->
-                <a href="rtx-5050.html" style="text-decoration: none; color: inherit;">
-  <article class="card glass">
-<img src="thumb.png" alt="Código de Programação" class="card-img">
-    <div class="card-content">
-      <span class="badge badge-news">​HARDWARE</span>
-      <h3 class="card-title">Rtx 5050 ou RX 7600? Análise completa</h3>
-      <p class="card-excerpt">Não erre no seu próximo upgrade. Analisamos detalhadamente os pontos fortes da RTX 5050 e da RX 7600 para te mostrar qual vale mais o seu investimento</p>
-      <div class="card-footer">
-        <span><i class="fa-regular fa-clock"></i> 5 horas atrás</span>
-        <span><i class="fa-regular fa-comment"></i> 12</span>
-      </div>
-    </div>
-  </article>
-</a>
-
-
-                <!-- Card 3 -->
-                <article class="card glass">
-                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Smartphone e Redes Sociais" class="card-img">
-                    <div class="card-content">
-                        <span class="badge badge-news">Mercado</span>
-                        <h3 class="card-title">Big Techs anunciam novas políticas de privacidade para 2024</h3>
-                        <p class="card-excerpt">O que muda para o usuário comum com as novas regulamentações globais de proteção de dados.</p>
-                        <div class="card-footer">
-                            <span><i class="fa-regular fa-clock"></i> Ontem</span>
-                            <span><i class="fa-regular fa-comment"></i> 89</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
+        <section style="margin-top: 40px;">
+            <h3 style="color: #38bdf8; text-align: center;">Resultados Finais: FPS Médio (1080p Desempenho Máximo)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jogo Testado</th>
+                        <th style="text-align: center;">RTX 5050</th>
+                        <th style="text-align: center;">RX 7600</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Cyberpunk 2077 (RT On)</td><td class="fps-rtx">120 FPS</td><td class="fps-rx">115 FPS</td></tr>
+                    <tr><td>Hogwarts Legacy</td><td class="fps-rtx">95 FPS</td><td class="fps-rx">88 FPS</td></tr>
+                    <tr><td>The Last of Us Part I</td><td class="fps-rtx">78 FPS</td><td class="fps-rx">82 FPS</td></tr>
+                    <tr><td>Resident Evil 4 Remake</td><td class="fps-rtx">105 FPS</td><td class="fps-rx">112 FPS</td></tr>
+                    <tr><td>Forza Horizon 5</td><td class="fps-rtx">135 FPS</td><td class="fps-rx">142 FPS</td></tr>
+                    <tr><td>Spider-Man Remastered</td><td class="fps-rtx">110 FPS</td><td class="fps-rx">105 FPS</td></tr>
+                    <tr><td>Red Dead Redemption 2</td><td class="fps-rtx">85 FPS</td><td class="fps-rx">78 FPS</td></tr>
+                    <tr><td>Battlefield 6</td><td class="fps-rtx">140 FPS</td><td class="fps-rx">120 FPS</td></tr>
+                    <tr><td>GTA V (Mod Realismo)</td><td class="fps-rtx">165 FPS</td><td class="fps-rx">180 FPS</td></tr>
+                </tbody>
+            </table>
         </section>
 
-        <!-- Reviews em Destaque -->
-        <section id="reviews" style="margin-top: 6rem;">
-            <div class="section-header">
-                <h2 class="section-title">Reviews de <span class="text-gradient">Hardware</span></h2>
-                <a href="#" class="view-all">Ver todos <i class="fa-solid fa-arrow-right"></i></a>
+        <div style="margin-top: 40px; text-align: center;">
+            <h3 style="color: #38bdf8; margin-bottom: 15px;">Assista à Análise Detalhada</h3>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                        src="https://www.youtube.com/embed/sf6hLNTMcfk" allowfullscreen></iframe>
             </div>
-            
-            <div class="grid">
-                <!-- Card 4 -->
-                <article class="card glass">
-                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Setup Minimalista" class="card-img">
-                    <div class="card-content">
-                        <span class="badge badge-review">Review</span>
-                        <h3 class="card-title">MacBook Pro M3 Max: Vale o investimento?</h3>
-                        <p class="card-excerpt">Testamos o novo monstro da Apple em tarefas pesadas de renderização e compilação de código.</p>
-                        <div class="card-footer">
-                            <span>Por Alex Silva</span>
-                            <span><i class="fa-solid fa-star" style="color: #fbbf24;"></i> 4.8/5</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 5 -->
-                <article class="card glass">
-                    <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=800&q=80" alt="Teclado Mecânico" class="card-img">
-                    <div class="card-content">
-                        <span class="badge badge-review">Review</span>
-                        <h3 class="card-title">Keychron Q1 Pro: O teclado definitivo para devs</h3>
-                        <p class="card-excerpt">Construção em alumínio, switches customizáveis e conexão sem fio impecável. Confira nossa análise.</p>
-                        <div class="card-footer">
-                            <span>Por Sarah Costa</span>
-                            <span><i class="fa-solid fa-star" style="color: #fbbf24;"></i> 4.9/5</span>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Card 6 -->
-                <article class="card glass">
-                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80" alt="Smartwatch" class="card-img">
-                    <div class="card-content">
-                        <span class="badge badge-review">Review</span>
-                        <h3 class="card-title">Galaxy Watch 6 Classic: O retorno da coroa giratória</h3>
-                        <p class="card-excerpt">A Samsung acertou em cheio ao trazer de volta o recurso mais amado pelos usuários da linha Watch.</p>
-                        <div class="card-footer">
-                            <span>Por Marcos Lima</span>
-                            <span><i class="fa-solid fa-star" style="color: #fbbf24;"></i> 4.5/5</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Newsletter -->
-        <section class="newsletter glass">
-            <h2>Não perca nenhuma <span class="text-gradient">atualização</span></h2>
-            <p>Junte-se a mais de 10.000 entusiastas de tecnologia. Receba nossa curadoria semanal diretamente no seu e-mail.</p>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscrito com sucesso!');">
-                <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" required>
-                <button type="submit" class="btn btn-primary">Inscrever-se</button>
-            </form>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-discord"></i></a>
-            </div>
-            <p>&copy; 2024 XIXTech. Todos os direitos reservados.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--glass-border);">Construído com HTML, CSS e JS puros.</p>
         </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = menuBtn.querySelector('i');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            
-            if (mobileMenu.classList.contains('active')) {
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-xmark');
-            } else {
-                menuIcon.classList.remove('fa-xmark');
-                menuIcon.classList.add('fa-bars');
-            }
-        });
-
-        // Close mobile menu when clicking a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                menuIcon.classList.remove('fa-xmark');
-                menuIcon.classList.add('fa-bars');
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const headerOffset = 80;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
-                }
-            });
-        });
-    </script>
+        <footer style="margin-top: 50px; text-align: center; color: #64748b; font-size: 0.85em; border-top: 1px solid #334155; padding-top: 20px;">
+            <p>© 2026 XIXTech - Dados compilados do vídeo do TecnoArt.</p>
+        </footer>
+    </div>
 </body>
 </html>
