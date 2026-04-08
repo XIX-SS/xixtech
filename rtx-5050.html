@@ -5,133 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RTX 5050 vs RX 7600 - XIXTech</title>
     <style>
-        body {
-            font-family: sans-serif;
-            background: #0f172a;
-            color: white;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-        .btn-voltar {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        h1 {
-            color: #f8fafc;
-            border-bottom: 2px solid #38bdf8;
-            padding-bottom: 10px;
-        }
-        .tech-box {
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            border-left: 5px solid;
-        }
+        body { font-family: sans-serif; background: #0f172a; color: white; padding: 20px; line-height: 1.6; }
+        .container { max-width: 900px; margin: auto; }
+        .btn-voltar { display: inline-block; margin-bottom: 20px; color: #38bdf8; text-decoration: none; font-weight: bold; }
+        h1 { color: #f8fafc; border-bottom: 2px solid #38bdf8; padding-bottom: 10px; text-align: center; }
+        .tech-section { display: flex; flex-direction: column; gap: 25px; margin-top: 30px; }
+        .tech-box { padding: 25px; border-radius: 12px; border-top: 6px solid; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .rtx-box { background: #112211; border-color: #76b900; }
+        .rx-box { background: #221111; border-color: #f97316; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; }
+        .rtx-badge { background: #76b900; color: black; }
+        .rx-badge { background: #f97316; color: white; }
+        h2 { margin-top: 0; font-size: 1.5em; }
+        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; font-size: 0.9em; }
+        .spec-item { background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html" class="btn-voltar">← Voltar para o Início</a>
         
-        <h1>RTX 5050 vs RX 7600: Qual vale mais a pena?</h1>
+        <h1>RTX 5050 vs RX 7600: O Embate das Tecnologias</h1>
 
-        <p>A nova <strong>RTX 5050</strong> e a consagrada <strong>RX 7600</strong> disputam o posto de melhor placa para Full HD. Abaixo, detalhamos as tecnologias e o hardware de cada uma com base na análise do canal <strong>TecnoArt</strong>.</p>
+        <p style="text-align: center; font-size: 1.1em; color: #cbd5e1;">Análise técnica profunda comparando a eficiência da IA da NVIDIA contra o poder bruto da AMD.</p>
 
-        <div class="tech-box" style="background-color: #1a2e1a; border-color: #76b900;">
-            <h2 style="color: #76b900; margin-top: 0;">NVIDIA RTX 5050 (Arquitetura Blackwell)</h2>
-            <p>A <strong>RTX 5050</strong> testada no vídeo conta com <strong>8GB de memória VRAM GDDR7</strong>, uma evolução significativa que garante maior largura de banda para texturas pesadas. O grande destaque tecnológico é o <strong>DLSS 4</strong> exclusivo da série 50, que utiliza Inteligência Artificial para gerar quadros inteiros (Frame Generation) e reconstruir raios (Ray Reconstruction), permitindo que jogos pesados rodem com alta fluidez mesmo em configurações ultra. Além disso, sua arquitetura Blackwell é extremamente eficiente, entregando mais desempenho por watt consumido.</p>
-        </div>
-
-        <div class="tech-box" style="background-color: #2e1a1a; border-color: #f97316;">
-            <h2 style="color: #f97316; margin-top: 0;">AMD Radeon RX 7600 (Arquitetura RDNA 3)</h2>
-            <p>A <strong>RX 7600</strong> é equipada com <strong>8GB de memória VRAM GDDR6</strong> e se destaca pelo seu alto poder bruto de processamento. Ela utiliza a arquitetura RDNA 3, que traz aceleradores de IA dedicados e suporte ao <strong>FSR 3.1 (FidelityFX Super Resolution)</strong>. No vídeo, o [TecnoArt](https://www.youtube.com/watch?v=sf6hLNTMcfk) ressalta que, embora não possua a mesma eficiência de IA da concorrente, ela compensa com uma entrega de quadros nativos muito sólida e um preço muito mais agressivo, sendo a escolha ideal para quem busca performance sem depender tanto de upscaling.</p>
-        </div>
-
-        <section style="background-color: #1e293b; padding: 20px; border-radius: 8px; margin-top: 30px;">
-            <h3 style="color: #38bdf8; text-align: center;">Prós e Contras Rápidos</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around;">
-                <div style="flex: 1; min-width: 250px;">
-                    <h4 style="color: #76b900;">RTX 5050</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li>✅ DLSS 4 e Ray Tracing superior.</li>
-                        <li>✅ Menor consumo de energia.</li>
-                    </ul>
-                </div>
-                <div style="flex: 1; min-width: 250px;">
-                    <h4 style="color: #f97316;">RX 7600</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li>✅ Melhor preço por FPS nativo.</li>
-                        <li>✅ Ótima em jogos competitivos.</li>
-                    </ul>
+        <div class="tech-section">
+            <div class="tech-box rtx-box">
+                <span class="badge rtx-badge">Arquitetura Blackwell</span>
+                <h2>NVIDIA GeForce RTX 5050</h2>
+                <p>A <strong>RTX 5050</strong> não é apenas um upgrade de velocidade, mas uma mudança de paradigma. Equipada com <strong>8GB de memória GDDR7</strong>, ela alcança uma largura de banda de <strong>320 GB/s</strong>, o que elimina gargalos em resoluções altas. O grande diferencial está nos <strong>Tensor Cores de 5ª Geração</strong>, que permitem o uso do <strong>DLSS 4 Multi-Frame Generation</strong>.</p>
+                <p>Diferente das gerações passadas, a série 50 introduz a <strong>Reconstrução de Raios (Ray Reconstruction)</strong> aprimorada por IA, que limpa o ruído do Ray Tracing em tempo real sem perder performance. É a placa ideal para quem prioriza tecnologias de última geração como o <strong>NVIDIA ACE</strong> (para NPCs com IA) e quer o máximo de fidelidade visual com baixo consumo (TGP de apenas 130W).</p>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>VRAM:</strong> 8GB GDDR7 (128-bit)</div>
+                    <div class="spec-item"><strong>Tecnologia:</strong> DLSS 4 / Reflex</div>
+                    <div class="spec-item"><strong>Interface:</strong> PCIe 5.0 x8</div>
+                    <div class="spec-item"><strong>Foco:</strong> Inteligência Artificial e RT</div>
                 </div>
             </div>
-        </section>
 
-        <section style="margin-top: 30px;">
-            <h3 style="color: #38bdf8; text-align: center;">Desempenho Real em Jogos (FPS Médio)</h3>
-            <table style="width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 8px; overflow: hidden;">
+            <div class="tech-box rx-box">
+                <span class="badge rx-badge">Arquitetura RDNA 3</span>
+                <h2>AMD Radeon RX 7600</h2>
+                <p>A <strong>RX 7600</strong> foca no que a AMD faz de melhor: <strong>Poder Bruto Nativo</strong>. Com a arquitetura RDNA 3 e o chip Navi 33, ela entrega <strong>2048 Stream Processors</strong> que trabalham com frequências de boost altíssimas. Seus <strong>8GB de VRAM GDDR6</strong> são otimizados pela tecnologia <strong>AMD Infinity Cache de 32MB</strong>, que acelera a comunicação interna e garante performance estável em jogos competitivos.</p>
+                <p>Sua grande vantagem tecnológica é o <strong>FSR 3.1</strong>, que agora traz uma qualidade de imagem muito superior e suporte a Frame Generation de código aberto. Além disso, a RX 7600 é excelente para criadores de conteúdo devido ao suporte nativo para <strong>Codificação AV1</strong> e o engine de vídeo **Radiance Display**, que entrega cores mais precisas (12-bit) para monitores profissionais. É a campeã absoluta no custo por FPS "puro".</p>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>VRAM:</strong> 8GB GDDR6 (128-bit)</div>
+                    <div class="spec-item"><strong>Tecnologia:</strong> FSR 3.1 / Anti-Lag+</div>
+                    <div class="spec-item"><strong>Cache:</strong> 32MB Infinity Cache</div>
+                    <div class="spec-item"><strong>Foco:</strong> Performance Nativa e Custo</div>
+                </div>
+            </div>
+        </div>
+
+        <section style="margin-top: 40px;">
+            <h3 style="color: #38bdf8; text-align: center;">Comparativo de Performance (1080p Alto)</h3>
+            <table style="width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 8px; overflow: hidden; margin-top: 15px;">
                 <thead>
                     <tr style="background: #334155; color: #38bdf8;">
-                        <th style="padding: 10px; text-align: left;">Jogo (1080p Alto)</th>
-                        <th style="padding: 10px; color: #76b900;">RTX 5050</th>
-                        <th style="padding: 10px; color: #f97316;">RX 7600</th>
+                        <th style="padding: 12px; text-align: left;">Título do Game</th>
+                        <th style="padding: 12px; color: #76b900;">RTX 5050</th>
+                        <th style="padding: 12px; color: #f97316;">RX 7600</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 10px;">Cyberpunk 2077</td>
-                        <td style="padding: 10px; text-align: center; color: #76b900;">120 FPS</td>
-                        <td style="padding: 10px; text-align: center; color: #f97316;">115 FPS</td>
+                        <td style="padding: 12px;">Cyberpunk 2077 (RT On)</td>
+                        <td style="padding: 12px; text-align: center; color: #76b900;">120 FPS</td>
+                        <td style="padding: 12px; text-align: center; color: #f97316;">115 FPS</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 10px;">GTA V</td>
-                        <td style="padding: 10px; text-align: center; color: #76b900;">165 FPS</td>
-                        <td style="padding: 10px; text-align: center; color: #f97316;">180 FPS</td>
+                        <td style="padding: 12px;">GTA V (Mod Vida Real)</td>
+                        <td style="padding: 12px; text-align: center; color: #76b900;">165 FPS</td>
+                        <td style="padding: 12px; text-align: center; color: #f97316;">180 FPS</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 10px;">Battlefield 6</td>
-                        <td style="padding: 10px; text-align: center; color: #76b900;">140 FPS</td>
-                        <td style="padding: 10px; text-align: center; color: #f97316;">120 FPS</td>
+                        <td style="padding: 12px;">Forza Horizon 5</td>
+                        <td style="padding: 12px; text-align: center; color: #76b900;">135 FPS</td>
+                        <td style="padding: 12px; text-align: center; color: #f97316;">142 FPS</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 10px;">Red Dead Redemption 2</td>
-                        <td style="padding: 10px; text-align: center; color: #76b900;">85 FPS</td>
-                        <td style="padding: 10px; text-align: center; color: #f97316;">78 FPS</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 10px;">Forza Horizon 5</td>
-                        <td style="padding: 10px; text-align: center; color: #76b900;">135 FPS</td>
-                        <td style="padding: 10px; text-align: center; color: #f97316;">142 FPS</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 10px;">Spider-Man Remastered</td>
-                        <td style="padding: 10px; text-align: center; color: #76b900;">110 FPS</td>
-                        <td style="padding: 10px; text-align: center; color: #f97316;">105 FPS</td>
+                        <td style="padding: 12px;">Spider-Man Remastered</td>
+                        <td style="padding: 12px; text-align: center; color: #76b900;">110 FPS</td>
+                        <td style="padding: 12px; text-align: center; color: #f97316;">105 FPS</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <div style="margin-top: 30px; text-align: center;">
-            <h3 style="color: #38bdf8;">Assista à Análise Completa</h3>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+        <div style="margin-top: 40px; text-align: center;">
+            <h3 style="color: #38bdf8; margin-bottom: 15px;">Análise Detalhada TecnoArt</h3>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
                 <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-                        src="https://www.youtube.com/embed/sf6hLNTMcfk" 
-                        title="YouTube video player" 
-                        allowfullscreen>
-                </iframe>
+                        src="https://www.youtube.com/embed/sf6hLNTMcfk" allowfullscreen></iframe>
             </div>
         </div>
 
-        <footer style="margin-top: 40px; text-align: center; color: #94a3b8; font-size: 0.9em; border-top: 1px solid #334155; padding-top: 20px;">
-            <p>© 2024 XIXTech - Baseado nos dados de [TecnoArt](https://www.youtube.com/watch?v=sf6hLNTMcfk)</p>
+        <footer style="margin-top: 50px; text-align: center; color: #64748b; font-size: 0.85em; border-top: 1px solid #334155; padding-top: 20px;">
+            <p>© 2024 XIXTech - Dados compilados de [TecnoArt](https://www.youtube.com/watch?v=sf6hLNTMcfk) e especificações oficiais NVIDIA/AMD.</p>
         </footer>
     </div>
 </body>
