@@ -1,131 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTX 5050 vs RX 7600 - XIXTech</title>
-    <style>
-        body { font-family: sans-serif; background: #0f172a; color: white; padding: 20px; line-height: 1.6; }
-        .container { max-width: 900px; margin: auto; }
-        .btn-voltar { display: inline-block; margin-bottom: 20px; color: #38bdf8; text-decoration: none; font-weight: bold; }
-        h1 { color: #f8fafc; border-bottom: 2px solid #38bdf8; padding-bottom: 10px; text-align: center; }
-        .tech-section { display: flex; flex-direction: column; gap: 25px; margin-top: 30px; }
-        .tech-box { padding: 25px; border-radius: 12px; border-top: 6px solid; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        .rtx-box { background: #112211; border-color: #76b900; }
-        .rx-box { background: #221111; border-color: #f97316; }
-        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; }
-        .rtx-badge { background: #76b900; color: black; }
-        .rx-badge { background: #f97316; color: white; }
-        h2 { margin-top: 0; font-size: 1.5em; }
-        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; font-size: 0.9em; }
-        .spec-item { background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <a href="index.html" class="btn-voltar">← Voltar para o Início</a>
-        
-        <h1>RTX 5050 vs RX 7600: O Embate das Tecnologias</h1>
-
-        <p style="text-align: center; font-size: 1.1em; color: #cbd5e1;">Análise técnica profunda comparando a eficiência da IA da NVIDIA contra o poder bruto da AMD.</p>
-
-        <div class="tech-section">
-            <div class="tech-box rtx-box">
-                <span class="badge rtx-badge">Arquitetura Blackwell</span>
-                <h2>NVIDIA GeForce RTX 5050</h2>
-                <p>A <strong>RTX 5050</strong> utiliza <strong>8GB de memória GDDR7</strong> com largura de banda de <strong>320 GB/s</strong>. Seus <strong>Tensor Cores de 5ª Geração</strong> habilitam o <strong>DLSS 4</strong>, que combina Frame Generation e Ray Reconstruction para máxima fluidez.</p>
-                <div class="specs-grid">
-                    <div class="spec-item"><strong>VRAM:</strong> 8GB GDDR7 (128-bit)</div>
-                    <div class="spec-item"><strong>Tecnologia:</strong> DLSS 4 / Reflex</div>
-                    <div class="spec-item"><strong>Interface:</strong> PCIe 5.0 x8</div>
-                    <div class="spec-item"><strong>Consumo:</strong> TGP 130W</div>
-                </div>
-            </div>
-
-            <div class="tech-box rx-box">
-                <span class="badge rx-badge">Arquitetura RDNA 3</span>
-                <h2>AMD Radeon RX 7600</h2>
-                <p>A <strong>RX 7600</strong> foca em performance nativa com <strong>2048 Stream Processors</strong>. Seus <strong>8GB GDDR6</strong> trabalham com o <strong>Infinity Cache de 32MB</strong>, e o suporte ao <strong>FSR 3.1</strong> garante ganho de FPS em diversos títulos.</p>
-                <div class="specs-grid">
-                    <div class="spec-item"><strong>VRAM:</strong> 8GB GDDR6 (128-bit)</div>
-                    <div class="spec-item"><strong>Tecnologia:</strong> FSR 3.1 / Anti-Lag+</div>
-                    <div class="spec-item"><strong>Cache:</strong> 32MB Infinity Cache</div>
-                    <div class="spec-item"><strong>Codificação:</strong> AV1 Nativo</div>
-                </div>
-            </div>
-        </div>
-
-        <section style="margin-top: 40px;">
-            <h3 style="color: #38bdf8; text-align: center;">Resultados Completos dos Testes (1080p Alto/Ultra)</h3>
-            <table style="width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 8px; overflow: hidden; margin-top: 15px;">
-                <thead>
-                    <tr style="background: #334155; color: #38bdf8;">
-                        <th style="padding: 12px; text-align: left;">Título do Game</th>
-                        <th style="padding: 12px; color: #76b900;">RTX 5050</th>
-                        <th style="padding: 12px; color: #f97316;">RX 7600</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px;">Cyberpunk 2077 (RT On)</td>
-                        <td style="padding: 12px; text-align: center; color: #76b900;">120 FPS</td>
-                        <td style="padding: 12px; text-align: center; color: #f97316;">115 FPS</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px;">Hogwarts Legacy</td>
-                        <td style="padding: 12px; text-align: center; color: #76b900;">95 FPS</td>
-                        <td style="padding: 12px; text-align: center; color: #f97316;">88 FPS</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px;">The Last of Us Part I</td>
-                        <td style="padding: 12px; text-align: center; color: #76b900;">78 FPS</td>
-                        <td style="padding: 12px; text-align: center; color: #f97316;">82 FPS</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px;">Resident Evil 4 Remake</td>
-                        <td style="padding: 12px; text-align: center; color: #76b900;">105 FPS</td>
-                        <td style="padding: 12px; text-align: center; color: #f97316;">112 FPS</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px;">Forza Horizon 5</td>
-                        <td style="padding: 12px; text-align: center; color: #76b900;">135 FPS</td>
-                        <td style="padding: 12px; text-align: center; color: #f97316;">142 FPS</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px;">Spider-Man Remastered</td>
-                        <td style="padding: 12px; text-align: center; color: #76b900;">110 FPS</td>
-                        <td style="padding: 12px; text-align: center; color: #f97316;">105 FPS</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px;">Red Dead Redemption 2</td>
-                        <td style="padding: 12px; text-align: center; color: #76b900;">85 FPS</td>
-                        <td style="padding: 12px; text-align: center; color: #f97316;">78 FPS</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px;">Battlefield 6</td>
-                        <td style="padding: 12px; text-align: center; color: #76b900;">140 FPS</td>
-                        <td style="padding: 12px; text-align: center; color: #f97316;">120 FPS</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px;">GTA V (Mod Vida Real)</td>
-                        <td style="padding: 12px; text-align: center; color: #76b900;">165 FPS</td>
-                        <td style="padding: 12px; text-align: center; color: #f97316;">180 FPS</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <div style="margin-top: 40px; text-align: center;">
-            <h3 style="color: #38bdf8; margin-bottom: 15px;">Análise Detalhada TecnoArt</h3>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
-                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-                        src="https://www.youtube.com/embed/sf6hLNTMcfk" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <footer style="margin-top: 50px; text-align: center; color: #64748b; font-size: 0.85em; border-top: 1px solid #334155; padding-top: 20px;">
-            <p>© 2026 XIXTech - Dados compilados de [TecnoArt](https://www.youtube.com/watch?v=sf6hLNTMcfk) e especificações oficiais NVIDIA/AMD.</p>
-        </footer>
-    </div>
-</body>
-</html>
+<section style="margin-top: 40px;">
+    <h3 style="color: #38bdf8; text-align: center;">Resultados Finais: FPS Médio (1080p Ultra)</h3>
+    <table style="width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 8px; overflow: hidden; margin-top: 15px;">
+        <thead>
+            <tr style="background: #334155; color: #38bdf8;">
+                <th style="padding: 12px; text-align: left;">Jogo Testado</th>
+                <th style="padding: 12px; color: #76b900;">RTX 5050</th>
+                <th style="padding: 12px; color: #f97316;">RX 7600</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #334155;"><td>Cyberpunk 2077 (RT On)</td><td style="text-align: center; color: #76b900;">120 FPS</td><td style="text-align: center; color: #f97316;">115 FPS</td></tr>
+            <tr style="border-bottom: 1px solid #334155;"><td>Hogwarts Legacy</td><td style="text-align: center; color: #76b900;">95 FPS</td><td style="text-align: center; color: #f97316;">88 FPS</td></tr>
+            <tr style="border-bottom: 1px solid #334155;"><td>The Last of Us Part I</td><td style="text-align: center; color: #76b900;">78 FPS</td><td style="text-align: center; color: #f97316;">82 FPS</td></tr>
+            <tr style="border-bottom: 1px solid #334155;"><td>Resident Evil 4 Remake</td><td style="text-align: center; color: #76b900;">105 FPS</td><td style="text-align: center; color: #f97316;">112 FPS</td></tr>
+            <tr style="border-bottom: 1px solid #334155;"><td>Forza Horizon 5</td><td style="text-align: center; color: #76b900;">135 FPS</td><td style="text-align: center; color: #f97316;">142 FPS</td></tr>
+            <tr style="border-bottom: 1px solid #334155;"><td>Spider-Man Remastered</td><td style="text-align: center; color: #76b900;">110 FPS</td><td style="text-align: center; color: #f97316;">105 FPS</td></tr>
+            <tr style="border-bottom: 1px solid #334155;"><td>Red Dead Redemption 2</td><td style="text-align: center; color: #76b900;">85 FPS</td><td style="text-align: center; color: #f97316;">78 FPS</td></tr>
+            <tr style="border-bottom: 1px solid #334155;"><td>Battlefield 6</td><td style="text-align: center; color: #76b900;">140 FPS</td><td style="text-align: center; color: #f97316;">120 FPS</td></tr>
+            <tr style="border-bottom: 1px solid #334155;"><td>GTA V (Mod Realismo)</td><td style="text-align: center; color: #76b900;">165 FPS</td><td style="text-align: center; color: #f97316;">180 FPS</td></tr>
+        </tbody>
+    </table>
+</section>
