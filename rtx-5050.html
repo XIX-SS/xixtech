@@ -28,6 +28,12 @@
             border-bottom: 2px solid #38bdf8;
             padding-bottom: 10px;
         }
+        .tech-box {
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 5px solid;
+        }
     </style>
 </head>
 <body>
@@ -36,25 +42,33 @@
         
         <h1>RTX 5050 vs RX 7600: Qual vale mais a pena?</h1>
 
-        <p>A nova <strong>RTX 5050</strong> chegou ao mercado trazendo a arquitetura Blackwell e o poderoso DLSS 4. Confira abaixo a comparação completa de desempenho com a <strong>RX 7600</strong>, baseada nos testes técnicos do canal <strong>TecnoArt</strong>.</p>
+        <p>A nova <strong>RTX 5050</strong> e a consagrada <strong>RX 7600</strong> disputam o posto de melhor placa para Full HD. Abaixo, detalhamos as tecnologias e o hardware de cada uma com base na análise do canal <strong>TecnoArt</strong>.</p>
 
-        <section style="background-color: #1e293b; padding: 20px; border-radius: 8px; margin-top: 20px;">
-            <h3 style="color: #38bdf8; text-align: center;">Prós e Contras</h3>
+        <div class="tech-box" style="background-color: #1a2e1a; border-color: #76b900;">
+            <h2 style="color: #76b900; margin-top: 0;">NVIDIA RTX 5050 (Arquitetura Blackwell)</h2>
+            <p>A <strong>RTX 5050</strong> testada no vídeo conta com <strong>8GB de memória VRAM GDDR7</strong>, uma evolução significativa que garante maior largura de banda para texturas pesadas. O grande destaque tecnológico é o <strong>DLSS 4</strong> exclusivo da série 50, que utiliza Inteligência Artificial para gerar quadros inteiros (Frame Generation) e reconstruir raios (Ray Reconstruction), permitindo que jogos pesados rodem com alta fluidez mesmo em configurações ultra. Além disso, sua arquitetura Blackwell é extremamente eficiente, entregando mais desempenho por watt consumido.</p>
+        </div>
+
+        <div class="tech-box" style="background-color: #2e1a1a; border-color: #f97316;">
+            <h2 style="color: #f97316; margin-top: 0;">AMD Radeon RX 7600 (Arquitetura RDNA 3)</h2>
+            <p>A <strong>RX 7600</strong> é equipada com <strong>8GB de memória VRAM GDDR6</strong> e se destaca pelo seu alto poder bruto de processamento. Ela utiliza a arquitetura RDNA 3, que traz aceleradores de IA dedicados e suporte ao <strong>FSR 3.1 (FidelityFX Super Resolution)</strong>. No vídeo, o [TecnoArt](https://www.youtube.com/watch?v=sf6hLNTMcfk) ressalta que, embora não possua a mesma eficiência de IA da concorrente, ela compensa com uma entrega de quadros nativos muito sólida e um preço muito mais agressivo, sendo a escolha ideal para quem busca performance sem depender tanto de upscaling.</p>
+        </div>
+
+        <section style="background-color: #1e293b; padding: 20px; border-radius: 8px; margin-top: 30px;">
+            <h3 style="color: #38bdf8; text-align: center;">Prós e Contras Rápidos</h3>
             <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around;">
                 <div style="flex: 1; min-width: 250px;">
-                    <h4 style="border-bottom: 2px solid #76b900; padding-bottom: 5px; color: #76b900;">RTX 5050</h4>
+                    <h4 style="color: #76b900;">RTX 5050</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li>✅ <strong>DLSS 4:</strong> Frame Generation superior em jogos pesados.</li>
-                        <li>✅ <strong>Eficiência:</strong> Consumo energético otimizado (130W).</li>
-                        <li>❌ <strong>Preço:</strong> Valor de mercado mais elevado.</li>
+                        <li>✅ DLSS 4 e Ray Tracing superior.</li>
+                        <li>✅ Menor consumo de energia.</li>
                     </ul>
                 </div>
                 <div style="flex: 1; min-width: 250px;">
-                    <h4 style="border-bottom: 2px solid #f97316; padding-bottom: 5px; color: #f97316;">RX 7600</h4>
+                    <h4 style="color: #f97316;">RX 7600</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li>✅ <strong>Custo-Benefício:</strong> Melhor preço por FPS nativo.</li>
-                        <li>✅ <strong>Poder Bruto:</strong> Excelente em 1080p sem IA.</li>
-                        <li>❌ <strong>Tecnologia:</strong> FSR 3 ainda não alcança a fluidez do DLSS 4.</li>
+                        <li>✅ Melhor preço por FPS nativo.</li>
+                        <li>✅ Ótima em jogos competitivos.</li>
                     </ul>
                 </div>
             </div>
@@ -106,7 +120,7 @@
         </section>
 
         <div style="margin-top: 30px; text-align: center;">
-            <h3 style="color: #38bdf8;">Assista à Análise do TecnoArt</h3>
+            <h3 style="color: #38bdf8;">Assista à Análise Completa</h3>
             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
                 <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
                         src="https://www.youtube.com/embed/sf6hLNTMcfk" 
@@ -117,7 +131,7 @@
         </div>
 
         <footer style="margin-top: 40px; text-align: center; color: #94a3b8; font-size: 0.9em; border-top: 1px solid #334155; padding-top: 20px;">
-            <p>© 2024 XIXTech - Baseado nos testes de [TecnoArt](https://www.youtube.com/watch?v=sf6hLNTMcfk)</p>
+            <p>© 2024 XIXTech - Baseado nos dados de [TecnoArt](https://www.youtube.com/watch?v=sf6hLNTMcfk)</p>
         </footer>
     </div>
 </body>
