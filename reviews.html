@@ -24,11 +24,21 @@
         .card {background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit; transition: 0.3s; display: flex; flex-direction: column;}
         .card:hover {transform: translateY(-5px); border-color: var(--cyan);}
         
-        /* Tamanho Uniforme dos "Quadradinhos" (Sem Corte da IA) */
-        .card-img, .placeholder-img {width: 100%; height: 200px; object-fit: contain; background: #1e293b; display: block;}
+        /* Tamanho Uniforme dos "Quadradinhos" e Efeito de "Zoom" (Cover) */
+        .card-img, .placeholder-img {
+            width: 100%; 
+            height: 200px; /* Altura fixa para manter todos iguais */
+            object-fit: cover; /* ISSO DÁ O ZOOM: Preenche tudo, cortando o que sobrar */
+            display: block;
+        }
         
         /* Estilo Específico para o Placeholder com Ícone */
-        .placeholder-img {display: flex; align-items: center; justify-content: center;}
+        .placeholder-img {
+            background: #1e293b; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
         
         .card-content {padding: 1.5rem; flex-grow: 1;}
     </style>
