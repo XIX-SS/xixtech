@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutoriais & Guias | XIXTech</title>
+    <title>XIXTech | Tutoriais</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {--bg-color: #0f172a; --text-main: #f8fafc; --text-muted: #94a3b8; --cyan: #06b6d4; --purple: #8b5cf6; --glass-bg: rgba(255, 255, 255, 0.03); --glass-border: rgba(255, 255, 255, 0.08);}
         body {background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6;}
-        .container {max-width: 1100px; margin: 0 auto; padding: 0 2rem;}
+        .container {max-width: 1200px; margin: 0 auto; padding: 0 2rem;}
         .text-gradient {background: linear-gradient(135deg, var(--cyan), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+        
         header {padding: 1.5rem 0; border-bottom: 1px solid var(--glass-border); position: sticky; top: 0; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); z-index: 100;}
         nav {display: flex; justify-content: space-between; align-items: center;}
         .logo {font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; text-decoration: none; color: white;}
-        .nav-links a {margin-left: 2.5rem; text-decoration: none; color: var(--text-muted); font-weight: 500;}
-        .table-container {background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; overflow-x: auto; margin-bottom: 3rem; padding: 1.5rem;}
-        table {width: 100%; border-collapse: collapse; min-width: 600px;}
-        th {text-align: left; color: var(--text-muted); padding: 12px; border-bottom: 2px solid var(--glass-border);}
-        td {padding: 15px 12px; border-bottom: 1px solid var(--glass-border);}
-        .badge {background: rgba(6, 182, 212, 0.1); color: var(--cyan); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 700;}
+        .nav-links a {margin-left: 2.5rem; text-decoration: none; color: var(--text-muted); font-weight: 500; transition: 0.3s;}
+        .nav-links a:hover {color: var(--cyan);}
+
+        .hero {padding: 5rem 0; text-align: center;}
+        .hero h1 {font-family: 'Space Grotesk', sans-serif; font-size: 3rem; margin: 0; letter-spacing: -2px;}
+        
+        section {padding: 2rem 0;}
+        .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;}
+        
+        .card {background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 24px; overflow: hidden; transition: 0.4s; text-decoration: none; color: inherit; display: block;}
+        .card:hover {transform: translateY(-10px); border-color: var(--cyan); background: rgba(255, 255, 255, 0.05);}
+        
+        .card-image {height: 220px; background: #1e293b; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;}
+        .card-image i {font-size: 3rem; color: var(--cyan); opacity: 0.5;}
+        .card-image img {width: 100%; height: 100%; object-fit: cover;}
+        
+        .card-content {padding: 2rem;}
+        .card-content h3 {margin: 0 0 1rem 0; font-size: 1.4rem; font-family: 'Space Grotesk', sans-serif;}
+        .card-content p {color: var(--text-muted); margin: 0; font-size: 0.95rem;}
+        
+        footer {padding: 4rem 0; border-top: 1px solid var(--glass-border); text-align: center; margin-top: 5rem;}
     </style>
 </head>
 <body>
@@ -34,33 +50,48 @@
             </div>
         </nav>
     </header>
+
     <main class="container">
-        <h1 style="margin-top: 3rem;">Guia de Compra: <span class="text-gradient">Melhores Celulares</span></h1>
-        <p style="color: var(--text-muted); margin-bottom: 3rem;">Comparativo completo de Abril de 2026 baseado nos testes do canal TecnoGeek.</p>
+        <section class="hero">
+            <h1>Central de <span class="text-gradient">Tutoriais</span></h1>
+            <p style="color: var(--text-muted); margin-top: 1rem;">Guias passo a passo e comparativos para turbinar seu conhecimento.</p>
+        </section>
 
-        <div class="table-container">
-            <h2 style="color: var(--cyan);">Até R$ 700</h2>
-            <table>
-                <thead><tr><th>Modelo</th><th>Processador</th><th>Bateria</th><th>Destaque</th></tr></thead>
-                <tbody>
-                    <tr><td>Galaxy A07</td><td>Helio G99</td><td>5000 mAh</td><td><span class="badge">CÂMERAS</span></td></tr>
-                    <tr><td>Redmi 15C</td><td>Helio G85</td><td>6000 mAh</td><td><span class="badge">BATERIA</span></td></tr>
-                    <tr><td>Realme Note 70</td><td>Unisoc T612</td><td>6300 mAh</td><td><span class="badge">AUTONOMIA</span></td></tr>
-                </tbody>
-            </table>
-        </div>
+        <section class="grid">
+            <a href="celulares-2026.html" class="card">
+                <div class="card-image">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Melhores Celulares (Abril 2026)</h3>
+                    <p>Confira o comparativo completo de especificações e preços do mês.</p>
+                </div>
+            </a>
 
-        <div class="table-container">
-            <h2 style="color: var(--cyan);">Até R$ 2.000</h2>
-            <table>
-                <thead><tr><th>Modelo</th><th>Processador</th><th>AnTuTu</th><th>Destaque</th></tr></thead>
-                <tbody>
-                    <tr><td>Poco X7 Pro</td><td>Dimensity 8400</td><td>2 Milhões</td><td><span class="badge">GAMER</span></td></tr>
-                    <tr><td>Galaxy A56</td><td>Exynos 1580</td><td>1.2 Milhão</td><td><span class="badge">EQUILÍBRIO</span></td></tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="card">
+                <div class="card-image">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Em breve</h3>
+                    <p>Novo tutorial de hardware ou software em produção.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Em breve</h3>
+                    <p>Acompanhe para novos guias técnicos semanais.</p>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p style="color: var(--text-muted);">&copy; 2026 XIXTech - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
-
